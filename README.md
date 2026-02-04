@@ -1,6 +1,13 @@
-# Projekt z SQL Engeto
+# Analýza mezd a cen potravin v ČR (2006–2018)
 
-## Datová příprava (Primary Table)
+## Projekt v rámci Datové akademie Engeto
+### Autor: Vladimír Řádek
+---
+
+## 🎯 Cíl projektu
+Cílem tohoto projektu je analýza dostupnosti základních potravin v závislosti na průměrných mzdách v České republice. Výzkum se zaměřuje na zjištění, zda ceny potravin rostou úměrně mzdám, nebo zda dochází k rozevírání nůžek mezi kupní silou a cenovou hladinou. Součástí je také sledování vlivu HDP na mzdový vývoj.
+
+## 🛠️ Datová příprava (Primary Table)
 
 Základem celé analýzy je tabulka `t_vladimir_radek_project_SQL_primary_final`. Při jejím vytváření jsem kladl důraz na čistotu dat a eliminaci duplicit.
 
@@ -48,7 +55,7 @@ JOIN (
 ```
 
 
-## Sekundární data (Secondary Table)
+## 🛠️ Datová příprava sekundárních dat (Secondary Table)
 
 Pro kontextuální analýzu v rámci celé Evropy jsem vytvořil tabulku `t_vladimir_radek_project_SQL_secondary_final`. Tato data slouží k porovnání ekonomické situace ČR s ostatními evropskými státy a k analýze vlivu makroekonomických ukazatelů.
 
@@ -177,7 +184,7 @@ Pro tvorbu reportu byly vytvořeny dvě hlavní tabulky:
 
 ---
 
-## Datová omezení a poznámky
+## ⚠️ Datová omezení a poznámky
 * **Časová dostupnost potravin:** U kategorie **Jakostní víno bílé** jsou data dostupná až od roku 2015, což bylo zohledněno při interpretaci dlouhodobých trendů.
 * **Agregace mezd:** Data pracují s průměry za celá odvětví, nikoliv za konkrétní pozice. Analýza tedy nepostihuje rozdíly mezi konkrétními profesemi uvnitř jednoho sektoru (např. rozdíl mezi mzdou programátora a operátora technické podpory v rámci IT).
 * **Roční agregace:** Ceny potravin i mzdy jsou v analýze průměrovány za celý kalendářní rok. Tato agregace poskytuje jasný pohled na dlouhodobé trendy, ale přirozeně "vyhlazuje" krátkodobé sezónní výkyvy (např. dočasné skoky cen zeleniny během neúrody nebo vánoční bonusy u mezd).
